@@ -479,7 +479,85 @@ e stabilisce il raggio delle regioni dell'universo che al tempo $t$ entrano in c
 \section{Componenti Osservate nell'Universo}
 
 \subsubsection{Galassie}
-La funzione di luminosità di Schechter provvede una descrizione parametrica della densità spaziale delle galassie in funzione della loro luminosità.
+La funzione di luminosità di Schechter provvede una descrizione parametrica della densità spaziale delle galassie in funzione della loro luminosità:
 $$
-\phi (L) = \frac{\phi_*}{L_*} \left ( \frac{L}{L_*}  \right)^{-\alpha}e^{-L/L_*}
+\phi (L) = \frac{\phi_*}{L_*} \left ( \frac{L}{L_*}  \right)^{-\alpha}e^{-L/L_*}\qquad \mathcal{L}_{tot}=\int \phi (L) \, L \, \mathrm{d}L
 $$
+Mediante una stima del rapporto $M/L$ di ottiene una stima di $\rho_{gal} \simeq 0.02\: \rho_{cr,0}$ riferita alle galassie luminose.
+\begin{equation}
+    \Omega_{gal}=0.02
+\end{equation}
+
+\subsubsection{Materia Barionica}
+Esiste inoltre materia barionica che non è nelle galassie (e non produce sufficiente luce). Si può ottenere una stima di questo contributo tramite due approcci diversi. Uno è il modello della nucleosintesi primordiale (necessario per spiegare le abbondanze degli elementi leggeri $D$, $Li$, $He_3$, ... che si osserva oggi) che prevedeva negli anni '70: $10^{-2}<\rho_{gal} < 0.15$. Il secondo sfrutta la variazione delle buche di potenziale osservabile dalla CMB ed è più preciso.
+\begin{equation}
+    \Omega_{b}=0.04 \div 0.05
+\end{equation}
+
+\subsubsection{Materia Oscura}
+Osservabile indirettamente grazie agli effetti gravitazionali: dinamica di galassie e ammassi, lensing gravitazionale, CMB, LSS. Tutti i diversi approcci danno un valore abbastanza consistente della densità della materia oscura.
+\begin{equation}
+    \Omega_{DM}=0.25 \div 0.26
+\end{equation}
+
+Ai fini cosmologici le tre componenti appena viste hanno $w=0$, per questo motivo il contributo di tutta la materia vale:
+\begin{equation}
+    \Omega_{m}= 0.3
+\end{equation}
+
+\subsubsection{Radiazione}
+A quanto pare sappiamo chiamare ogni fotone per nome, uno ad uno. I fotoni della CMB sono prodotti in una situazione di equilibrio, per questo motivo sono distribuiti come un corpo nero. Misurando la temperatura della radiazione oggi ($T_{R0}=2.726$ K), si può calcolare la loro densità oggi: $\rho_R c^2 = \sigma T_R^4$, che risulta essere $\rho_R=4.8\cdot 10^{-34}$ g cm$^{-3}$.
+\begin{equation}
+    \Omega_{R0}\simeq 10^{-5}\approx 0
+\end{equation}
+(I fotoni prodotti da stelle, ... sono trascurabili rispetto alla marea di fotoni della CMB).
+
+\subsubsection{Neutrini et al.}
+Se i neutrini non hanno massa, sono relativistici e anche per loro vale la relazione $\rho_\nu c^2 = \sigma T_\nu^4$. Per un valore stimato di $T_{\nu 0}=1.9$ K si avrebbe una densità ancora più piccola rispetto a quella della radiazione, circa il 70\%. Se avesse massa non si include nel contributo della radiazione, ma in quello della DM (a ritrosto, conoscendo $\Omega_{DM}$, si può stimare la massa del neutrino).
+
+\subsubsection{Dark Energy}
+Tramite evidenze osservative (scala dell'orizzonte cosmologico al momento della CMB) si sa che $\Omega_{TOT}=1$.
+Il contributo della costante cosmologica è dedotto per sottrazione:
+\begin{equation}
+    \Omega_{0\Lambda} = 1 - \sum \Omega_{0i}
+\end{equation}
+
+Un modo diverso per ottenere il suo contributo è tramite l'osservazione dell'espansione accelerata dell'universo (SNe): $q \approx -0.5$. Se si utilizzano la prima equazione di Friedmann (con $p=0$) e la definizione di $q$, si ottiene per soli universi di materia:
+$$
+q = \frac{\Omega_m}{2}\approx 0.15
+$$
+a differenza di quanto osservato, per cui è necessaria una componente aggiuntiva, che nel caso di $\Lambda$ porta a:
+$$
+q = \frac{\Omega_m}{2} -\Omega_\Lambda \equiv -0.5 \qquad\rightarrow\qquad \Omega_\Lambda \approx 0.7
+$$
+Si è già calcolato che, per avere accelerazione positiva nelle equazioni di Friedmann, deve valere la condizione $w< -1/3$ che caratterizza la \textit{dark energy}. Il caso particolare in cui $w=-1$ ad ogni $t$ caratterizza invece la \textit{costante cosmologica}. Quindi la dark energy è una famiglia larga di modelli che comprende anche quello della costante cosmologica (i dati dicono che è il più probabile).
+
+\subsubsection{Commenti Qualitativi a Caldo}
+Dalla Fig. \ref{fig:2rhored} e dai valori appena ottenuti si può osservare che:
+\begin{itemize}
+    \item Esistono due periodi di equivalenza: materia-radiazione e materia-$\Lambda$;
+    \item Soltanto oggi domina la costante cosmologica (\textbf{problema della coincidenza});
+    \item La radiazione domina soltanto nella prima epoca dell'universo.
+    \item Nel periodo intermedio possiamo considerare l'universo composto solo da materia.
+\end{itemize}
+
+Utilizzando la relazione (\ref{eq:rhoaw}) è possibile calcolare una stima per il redshift a cui si hanno le due equivalenze:
+\begin{align}
+  & z_{eq,\, rad}=\frac{0.3}{2.6\cdot 10^{-5}h^2} \simeq 5000  \\
+  & z_{eq,\, \Lambda}= \left ( \frac{\Omega_{0\Lambda}}{\Omega_{0m}} \right) ^{1/3} -1 \simeq 0.3  
+\end{align}
+Dato che un'eventuale curvatura, se esiste, si percepisce per $z<1/\Omega_0$. Quindi le considerazioni appena fatte, valevoli per un'universo EdS, sono valide.
+
+In aggiunta alla Fig. \ref{fig:2at} si può calcolare l'andamento di $a(t)$ per oggi, ossia nell'unico periodo della storia dell'universo in cui domina $\Lambda$. Ci si aspetta un'accelerazione, quindi un flesso ad un certo $t$ dal quale la curva si allontana dal modello EdS.
+\begin{equation}
+    z_{flex,\, \Lambda}= \left ( \frac{2 \Omega_{0\Lambda}}{\Omega_{0m}} \right) ^{1/3} -1 \simeq 0.6 
+\end{equation}
+A parità di $H_0$ (derivata della curva) ci si aspetta età più lunghe rispetto ad oggi, questo si può osservare normalizzando le curve rispetto ad oggi (FIGURA SI O NO?).
+(E ANCHE FIGURA OMEGAAAA).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=.8\textwidth]{Pictures/2/geom.eps}
+    \caption{Comportamento dei diametri angolari e delle distanze in funzione del redshift per tre diversi modelli cosmologici: universo aperto, chiuso e $\Lambda$CDM.}
+    \label{fig:2omegaz}
+\end{figure}
