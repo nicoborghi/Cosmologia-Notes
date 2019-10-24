@@ -4,9 +4,7 @@
 *.ptc
 *.gz
 *.toc
-*.ist
-*.ist
-StyleInd.ist
+*.blg
+*.bbl
 *.pdf
-main.pdf
-*.pdf
+
