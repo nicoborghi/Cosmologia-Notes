@@ -1,2 +1,52 @@
 \chapterimage{head2.png} % Chapter heading image
-\chapter{L'universo in fuga}\label{3:ch}
+\chapter{Evoluzione termica dell'Universo}\label{3:ch}
+
+
+\section{Temperatura e redshift}
+La materia e la radiazione hanno avuto la stessa temperatura finché le interazioni sono state sufficientemente elevate per mantenere una condizione di equilibrio. Per verificare se questo accade si utilizza come tempo scala il tempo collisionale: $\tau_{coll}=(c\sigma n)^{-1}$. Oggi buona parte della materia è in forma neutra per cui possiamo assumere $\sigma \rightarrow \sigma_H$, inoltre  esprimere: $n_0 = \rho_0 / m_P$. Questa quantità va confrontata col tempo tipico di espansione dell'universo $\tau_{exp} \sim 1/H_0$. Si trova che, oggi, $\tau_{coll} \gg \tau_{exp}$, per cui $T_{m0} \neq T_{r0}$ e possiamo considerarle come componente separate.
+L'andamento della temperatura in funzione del redshift si ricava tramite l'equazione di adiabaticità:
+$$
+\mathrm{d}(\rho c^2 a^3) = - p_m\: \mathrm{d}a^3
+$$
+
+
+
+
+\subsection{Temperatura della materia}
+Si hanno due contributi alla densità di energia: l'energia di massa e l'energia termica. Per esprimere la pressione si fa uso dell'assunzione di gas perfetto. 
+$$
+ \rho c^2 = \rho_m c^2 + \frac{3}{2}k_B T_m \frac{\rho_m}{m_P} \qquad p_m = \frac{\rho_m k_B T_m}{m_P}
+$$
+Sostituendo questi valori nell'equazione di adiabaticità si ottiene:
+\begin{equation}
+    T_m = T_{0m} (1+z)^2 = T_{0m}\left ( \frac{a_0}{a}\right )^2  \propto a^{-2}
+\end{equation}
+Questo andamento era atteso poiché la condizione di adiabaticità implica $TV^{\gamma -1} = cost$, che per $\gamma=5/3$ restituisce lo stesso andamento appena ottenuto.
+
+\subsection{Temperatura della radiazione}
+In questo caso la densità di energia è ottenibile dalla funzione di corpo nero:
+
+$$
+ \rho_R c^2 = \sigma T_R^4 \qquad p_R = \frac{1}{3}\rho_R c^2 = \frac{\sigma T_R^4}{3}
+$$
+Sostituendo questi valori nell'equazione di adiabaticità si ottiene:
+\begin{equation}
+    T_R = T_{0R} (1+z) = T_{0R}\left ( \frac{a_0}{a}\right )  \propto a^{-1}
+\end{equation}
+
+Quindi materia e radiazione, quando separate, viaggiano su adiabatiche diverse.
+
+
+
+
+Il tempo scala delle collisioni evolve come $\tau_{coll}=(c\sigma n)^{-1} \propto \rho_b^{-1}$. Dato che la densità dei barioni $\rho_b \propto z^3$ si ha che $\tau_{coll}\propto (1+z)^{-3}$. I tempi-scala in gioco sono quindi:
+\begin{align*}
+    & \tau_{coll} \propto (1+z)^{-3} \\
+    & \tau_{exp, \, m} \propto (1+z)^{-3/2} \\
+    & \tau_{exp, \, R} \propto (1+z)^{-2}
+\end{align*}
+
+Avvicinandosi al Big Bang, $\tau_{coll}\ll \tau_{exp}$, quindi la condizione di equilibrio è verificata. Inoltre andando a temperature più alte cambia la sezione d'urto $\sigma_H \rightarrow \sigma_T$ e la sezione d'urto Thomson è estremamente efficiente a fare collisioni e la materia diventa relativistica. Materia e radiazione erano quindi termicamente accoppiate. Esiste un valore di $z$ per cui si disaccoppiano, \textit{decoupling}, e vale circa $z_{dec}\approx 1000$. Con la temperatura che diminuisce si ha anche la ricombinazione (neutralizzazione) dell'idrogeno e si forma la superficie di ultimo scatter.
+
+\section{Temperatura pre-disaccoppiamento}
+Ci si aspetterebbe che, essendo materia e radiazione accoppiate, la temperatura evolva con un andamento intermedio tra le due, cioè $T\propto a^x$ con $x\in (-2, -1)$.
