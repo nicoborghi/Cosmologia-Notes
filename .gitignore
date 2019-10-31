@@ -8,3 +8,6 @@
 *.bbl
 *.pdf
 *.log
+*.code-workspace
+__latexindent_temp.tex
+*.json
