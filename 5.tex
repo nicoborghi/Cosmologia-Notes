@@ -354,4 +354,75 @@ Questi valori si conoscevano già negli anni '70 e assieme alla misurazione dell
     \caption{Abbondanza relativaall'idrogeno degli elementi leggeri al variare di $\Omega_b$. La regione evidenziata corrisponde alle evidenze osservative.}
 \end{figure}
 
+\subsection{Epoca del Plasma}
+La temperatura diminuisce da $\sim 10^9$ K a $\sim 10^4$ K e l'universo diventa gradualmente più neutro. La successiva re-ionizzazione avverrà solamente per fenomeni di galaxy evolution. Essendo $z_{eq}\sim 1000$, la neutralizzazione formale avviene a $T \sim 2.7\cdot 10^4 $ K.
+ In particolare, le principali reazioni e le temperature a cui si ha il 50/50 sono, in ordine:
+\begin{equation*}\left\{
+    \def\arraystretch{1.5}
+        \begin{array}{lll}
+        He^{2+}+e^- \leftrightharpoons He^+ + \gamma & 10^4\; \mathrm{K} & \\
+        He^+ + e^- \leftrightharpoons He + \gamma &  7\cdot 10^3\; \mathrm{K} & neutralizzazione/\stkout[1pt]{ri}combinazione\; He\\
+        H^+ + e^- \leftrightharpoons H + \gamma &  4\cdot 10^3\; \mathrm{K} & neutralizzazione/\stkout[1pt]{ri}combinazione\; H
+    \end{array}\right.
+\end{equation*}
 
+Prima di questo momento si parla di \textit{epoca del plasma}. 
+In una prima fase si hanno: fotoni, $e^-$ e $ p^+$, l'elio (25\% in massa, 6\% in particelle) viene di solito trascurato. Le scale tipiche su cui avvengono le interazioni tra queste componenti sono:
+
+$$ \lambda_D =  \left( \frac{k_BT}{4\pi n_e e^2}\right)^{1/2} \quad \gg \quad \lambda_e \propto n_e^{-1/3} \propto \left ( \frac{m_P}{\rho_{0c}\Omega_{0b}}\right)^{1/3} \frac{T_0}{T}$$
+Ossia, dentro la sfera di Debye (entro la quale avvengono le interazioni $e^-$ e $p^+$) si ha un gran numero di ioni e quindi un \textit{buon} plasma. Inoltre confrontando il tempo tipico di collisioni tra ioni (attraversamento della sfera di Debye) con il tempo tipico di scattering tra $e^-$ e fotoni (gli $e^-$ perdono momento):
+$$ \tau_e = \frac{\lambda_D}{c} \quad \ll \quad \tau_{e\gamma '}=\frac{3m_e}{4\sigma c \rho_R} $$
+Per cui non si hanno fenomeni collettivi e $e^-$ e $p^+$ possono considerarsi `accoppiati'. Infine si può verificare che il tempo che serve per mantenerli in equilibrio termico:
+$$ \tau_{e^- p^+} = 10^6 (\Omega_{0b}h^2)^{-1} T^{-3/2}\; \textrm{s}  \quad \ll \quad \tau_{exp}$$
+Pertanto: elettroni e protoni hanno la stessa temperatura, lo scattering Compton è il processo dominante e ci si aspetta che la radiazione sia distribuita come un corpo nero.
+
+Le condizioni cambiano quando l'idrogeno \stkout[1pt]{ri}combina.
+
+\subsubsection{Equazioni di Saha}
+L'energia di legame dell'idrogeno è $B_H=13.6$ eV corrispondente a una temperatura di $1.6\cdot 10^5$ K. Quando l'universo raggiunge questa temperatura, la temperatura cala ulteriormente rispetto a quanto dettato dal raffreddamento adiabatico. 
+
+Il momento della \stkout[1pt]{ri}combinaizone si fissa quando la frazione di ionizzazione $x=n_e/n_{tot}=0.5$. Elettroni, protoni e idrogeno neutro hanno distribuzione di boltzmann non relativistica (Eq. \ref{eq:boltzmann} sostituendo, per l'H, il peso statistico $2$ con $4$ ). Sapendo che $\mu_p + \mu_e = \mu_H$ e assumendo l'universo elettricamente neutro ($n_e=n_p$):
+\begin{equation}
+    \frac{n_e n_p}{n_{tot}n_H}=\frac{x^2}{1-x}
+\end{equation}
+Applicando le distribuzioni di Boltzmann e approssimando $m_p=m_H$:
+\begin{equation}
+    \frac{x^2}{1-x} = \frac{1}{n_{tot}}\left( \frac{k_B T m_e}{2 \pi \hslash }\right) e^{- B_H / k_B T } 
+\end{equation}
+Il coefficiente tra parentesi non trascurabile sposta il taglio esponenziale a una temperatura minore di $1.6\cdot 10^5$ K. Inoltre dentro $n_{tot}$ si cela $\Omega_{0b}=0.046^{+0.1}_{-0.01}$, ma in questo caso è la temperatura che comanda. 
+
+\vspace{1em}
+La \textbf{ricombinazione} (= prima combinazione dell'idrogeno) avviene quindi a: $$T_{rec,H} \simeq 4000\; \textrm{K} \qquad z_{rec,H}\simeq 1400 \div 1600\quad (1500) $$
+Si ricorda che in questo momento si ha 50\% idrogeno neutro e 50\% idrogeno ionizzato, che crollerà esponenzialmente al diminuire di $T$ (stando a questa formula oggi dovrebbe essere $0$, ma non è così per galaxy evolution).
+In realtà questa reazione di neutralizzazione non avviene sempre in condizioni di equilibrio ($\tau_{rec} \sim x/\dot{x} \ll \tau_{exp}$), che sono già violate a $z\approx 2000$. Svolgendo i conti in condizioni di non equilibrio termico si può verificare che anche a $z\approx few \cdot 100$ c'è una piccola frazione di idrogeno ionizzato, importante per garantire l'accoppiamento materia-radiazione (non spiegabile con solo scattering tra fotoni e idrogeno neutro).
+
+Il vero disaccoppiamento tra le temperature di materia e radiazione è quindi:
+$$ z_{dec} \simeq 300 $$
+
+Quando la maggioranza dei fotoni non è più scatterata ed è quindi libera di giungere fino a noi, si osserva la CMB.
+
+
+La probabilità che un fotone venga scatterato da un elettrone a un certo redshift è:
+\begin{equation}
+    \mathrm{d}P=-\frac{\mathrm{d}N_\gamma}{N_\gamma}=-\frac{\mathrm{d}I}{I}=\frac{\mathrm{d}t}{\tau_{\gamma e}}=-\d{\tau} \qquad\quad \tau=\int_0^z \frac{xc\rho_m \sigma_T }{m_P}\frac{\d{t}}{\d{z'}}\d{z'}
+\end{equation}
+Da cui la probabilità che un fotone venga scatterato per l'ultima volta ad un dato redshift è:
+\begin{equation}
+    -\frac{\d{}}{\d{z}}\left( 1-e^{-\tau} \right)=e^{-\int \tau (z)\d{\tau}}
+\end{equation}
+Questa probabilità ha una distribuzione gaussiana centrata a $z\simeq 1100$ (detto \textbf{reshift dell'ultimo scattering} con una $FWHM=400$. Questo risultato dipende poco dalla cosmologia. A questi redshift la distribuzione dei fotoni consente di tracciare anche la distribuzione della materia, mentri a redshift maggiori non è possibile ottenere informazioni dalla radiazione.
+
+\vspace{1em}
+Si hanno quindi tre valori del redshift legati allo stesso fenomeno (ricombinazione dell'idrogeno $z\approx 1000$), ma formalmente diversi:
+\begin{example}[Ricombinazione: $\mathbf{z_{rec}=1500}$]
+Momento in cui $x=0.5 $
+\end{example}
+\begin{example}[Disaccoppiamento:  $\mathbf{z_{dec}=300}$]
+Momento in cui $x\lesssim 0$ e $T_m=T_R \rightarrow T_m \neq T_R $
+\end{example}
+\begin{example}[Last Scattering:  $\mathbf{z_{LS}=1100}$]
+Picco della distribuzione di probabilità di last scattering.
+\end{example}
+
+\vspace{1em}
+La conservazione del numero di fotoni $n_\gamma \propto (e^{h\nu /kT}-1)^{-1}$ in un universo in espansione fa sì che la radiazione rimanga distribuita come un corpo nero $I(t_i, \nu)\propto \nu^3 (e^{h\nu /kT}-1)^{-1}$, ma shiftato a frequenze minori, quindi con una $T=T_0(1+z)$. Questo, che è il più bel corpo nero visto in natura è stato osservato dal satellite COBE nel 1991. Una piccola deviazione si verifica a causa dei fotoni generati dalla ricombinazione, ma questo si vede solo nelle code e non nel picco dove $n_\gamma$ è altissimo. Ulteriori deviazioni dal corpo nero possono essere legate a fenomeni di fisica primordiale. In particolare a quelli avvenuti a $10^7 < z < 10^4 $, quando la CMB non sarebbe stata in grado di riportarsi all'equilibrio (a $z$ più alto la termalizzazione è molto rapida, mentre $z$ più basso il tempo si dilata e ha più tempo per termalizzare). Queste vengono dette \textit{anisotropie primarie} e vanno anch'esse cercate nelle code della plankiana. Tra le \textit{anisotropie secondarie} vi è l'effetto Sunyaev–Zeldovich (coming soon...). Con questo si chiude la prima metà del corso, siamo a metà, coraggio!

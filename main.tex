@@ -13,6 +13,7 @@
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage{amsthm, amssymb, amsmath}
+\usepackage{calc}
 \usepackage[italian]{babel}
 \usepackage{natbib}
 \usepackage{bookmark}
@@ -31,6 +32,15 @@
 
 \def\R{\mathbb{R}}
 \newcommand{\cvx}{convex}
+
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+%Strikeout
+\newsavebox\CBox
+\newcommand\stkout[2][0.5pt]{%
+  \ifmmode\sbox\CBox{$#2$}\else\sbox\CBox{#2}\fi%
+  \makebox[0pt][l]{\usebox\CBox}%  
+  \rule[0.4\ht\CBox-#1/2]{\wd\CBox}{#1}}
 
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \def\msun{\textit{M}_\odot}
@@ -90,12 +100,12 @@
 %\include{0}
 \include{1}
 \include{2}
-\include{3}
-\include{4}
-\include{5}
-%\include{6}
+%\include{3}
+%\include{4}
+%\include{5}
+\include{6}
 
-
+\include{99}
 %\nocite{*}
 %\bibliographystyle{mnras}
 \bibliography{bibliography}
