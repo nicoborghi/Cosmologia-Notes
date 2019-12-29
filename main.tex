@@ -18,6 +18,7 @@
 \usepackage{natbib}
 \usepackage{bookmark}
 \usepackage{float}
+\usepackage[caption = false]{subfig}
 
 % Bibliography
 %\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
@@ -56,10 +57,10 @@
 \centering
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-\textbf{CPSC 542F WINTER 2017}\\
-{\LARGE Convex Analysis and Optimization}\par % Book title
+\textbf{COSMOLOGIA NOTES}\\
+{\LARGE Appunti di Cosmologia A.A. 2019-2020}\par % Book title
 \vspace*{1cm}
-{\Huge Lecture Notes}\par % Author name
+{\Huge Light Bulb Lab}\par % Author name
 \endgroup
 
 %----------------------------------------------------------------------------------------
@@ -72,40 +73,52 @@
 
 %\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
 
-\noindent \textsc{Summer Research Internship, University of Western Ontario} \\
+\noindent \textsc{Appunti simpatici del corso di Cosmologia, Università di Bologna} \\
 
-\noindent \textsc{github.com/LaurethTeX/Clustering} \\ % URL
+\noindent \textsc{\href{https://lightbulblab.github.io}{lightbulblab.github.io}} \\ % URL
 
-\noindent This research was done under the supervision of Dr. Pauline Barmby with the financial support of the MITACS Globalink Research Internship Award within a total of 12 weeks, from June 16th to September 5th of 2014.\\ % License information
+~\vfill
 
-\noindent \textit{First release, August 2014} % Printing/edition date
+\noindent Come ogni piatto di cucina moderna è incompleto senza una salsa di accompagnamento, così anche i corsi universitari necessitano di una guida che armonizzi i contenuti e li spinga in un altra dimensione. Inoltre, vi sarà sicuramente successo di trovarvi in difficoltà alla domanda: ``Ok quello che stiamo facendo?'' non avendo una guida sintetica (e neppure voglia di rivedere gli appunti). Da queste esigenze sono state partorite le \textit{Cosmologia Notes}. Non garantiamo una perfetta fluidità e chiarezza, ma tanto divertimento e tante figure glitterate. Nell'ultimo capitolo sono riportati una serie di spunti di approfondimento dalla letteratura.  \\ % License information
+
+~\vfill
+
+\noindent \textbf{Disclamer:} Questo testo è appena entrato nel nostro orizzonte, lasciate il tempo alle perturbazioni ortografiche, sintattiche e contenutistiche di dissipare nel tempo. Per segnalare correzioni scriveteci a: \href{mailto:lightbulblab.navile@gmail.com}{lightbulblab.navile@gmail.com}. \\
+
+\noindent \textit{First release, January 2020} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
-
-\chapterimage{head1.png} % Table of contents heading image
-
+\chapterimage{intro.jpg} % Table of contents heading image
+%\chapter{Indice}
 \pagestyle{empty} % No headers
 
 \tableofcontents % Print the table of contents itself
 
 %\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
 
-\pagestyle{fancy} % Print headers again
+%\pagestyle{fancy} % Print headers again
 
 %----------------------------------------------------------------------------------------
 %	CHAPTERS
 %----------------------------------------------------------------------------------------
+
 %\include{0}
 \include{1}
 \include{2}
-%\include{3}
-%\include{4}
-%\include{5}
+\include{3}
+\include{4}
+\include{5}
 \include{6}
+\include{7}   % 
+\include{8}   % Pert
+\include{9}   % N lin
+\include{10}  % Clustering
+\include{11}  % CMB
 
-\include{99}
+\include{99} % Dalla letteratura
+
 %\nocite{*}
 %\bibliographystyle{mnras}
 \bibliography{bibliography}
