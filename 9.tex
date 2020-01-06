@@ -1,2 +1,108 @@
 \chapterimage{/9/head.jpg} % Chapter heading image
 \chapter{Evoluzione non Lineare}\label{9:ch}
+Le osservazioni attuali degli ammassi di galassie suggeriscono valori di $\delta \gg 1$, dell'ordine di $100$ o addirittura $1000$. In questi regimi l'approssimazione lineare non è più valida ed è necessario sviluppare una teoria non lineare adeguata. Seppur in qualche caso si riescano a fare i conti con carta e penna (\textit{regime weakly non-linear}, per studiare meglio l'avvicinamento a $\delta = 1$), il più delle volte sono necessarie simulazioni numeriche. 
+
+
+\section{Approssimazione di Zeldovich}
+Questo approccio per descrivere l'evoluzione non lineare delle perturbazioni prevede una distribuzione iniziale omogenea di materia non collisionale, descritta inizialmente da una lagrangiana imperturbata:
+\begin{equation}
+    \vec{r}(\vec{q},t)=a(t)\vec{q}+\vec{F}(\vec{q},t) \qquad \rightarrow \qquad \vec{r}(\vec{q},t)=a(t)\left[\vec{q}+\delta_+ (t) \vec{G}(\vec{q})\right]\label{eq9:zelapprox}
+\end{equation}
+dove $\vec{r}=a(t)\vec{x}$ ($\vec{x}$ coordinata comovente), $\vec{F}(\vec{q},t)$ è il termine di displacement, dipendente solo dalla posizione iniziale (sarà il limite di questo metodo) e si è assunta la separabilità: $\vec{F}(\vec{q},t)=a(t)\delta_+ (t)$ per analogia con la teoria lineare. Inoltre il termine di velocità, che quantifica lo spostamento di una particella rispetto alla posizione iniziale, è legato al potenziale gravitazionale iniziale dalla relazione: $\vec{G}(\vec{q})= -\nabla_q \Phi_0 (\vec{q})$. Inoltre si ha:
+\begin{equation*}\left.
+    \def\arraystretch{1.8}
+        \begin{array}{l}
+        \vec{v}=\frac{\d{\vec{r}}}{\d{t}}-H\vec{r}=a\frac{\d{\vec{x}}}{\d{t}}=a\;\dot{\delta}_+\nabla_q \Phi_0 (\vec{q}) \\
+        \nabla^2_q \Phi_0 = \delta / \delta_+ (t) \quad\rightarrow\quad \delta = \delta_+ (t)\nabla^2_q \Phi_0  \quad (Eq.\; Poisson)
+        
+    \end{array}\right. 
+\end{equation*}
+Nell'approssimazione di Zeldovich pertanto, l'approssimazione lineare è svolta sullo spostamento delle particelle, piuttosto che sulla densità. Viene detta teoria di perturbazione \textit{lagrangiana} al primo ordine (precedentemente si è trattata la teoria di perturbazione \textit{euleriana} al primo ordine). Richiede il calcolo del potenziale soltanto all'istante iniziale e prevede che le particelle si muovano su traiettorie rette. Il modello non è più esatto quando due particelle (assunte non collisionali) si incrociano (shell crossing): si viene a creare una singolatità. L'equazione \ref{eq9:zelapprox} mappa univocamente le coordinate $\vec{q}$ e $\vec{r}$, quindi fintantoché due traiettorie non si incrociano, per piccoli spostamenti si ha:
+\begin{equation}
+    \rho(\vec{r},t)\d{^3r}=\overbar{\rho} (t_i) \d{^3q} \quad \rightarrow \quad \rho(\vec{r},t) = \frac{\overbar{\rho} (t)}{|J(\vec{r},t)|}
+\end{equation}
+dove $|J(\vec{r},t)|$ è il determinante della matrice Jacobiana. Dal mometo che il fluido è irrotazionale, la matrice è simmetrica e quindi può essere diagonalizzata:
+\begin{equation}
+    \rho(\vec{r},t)=\overbar{\rho} (t) \left[\left(1-\delta_+ \lambda_1\right)\left(1-\delta_+ \lambda_2\right)\left(1-\delta_+ \lambda_3\right)\right]^{-1}
+\end{equation}
+Per tempi sufficientemente piccoli, per cui $\delta_+ (t)\lambda_i\ll 1$, si ha:
+\begin{equation}
+    \delta\simeq -\left(\lambda_1 + \lambda_2 + \lambda_3\right)\delta_+(t)
+\end{equation}
+Se i tre autovalori $\lambda_i (\not\propto t)$ sono $<0$ la densità diminuisce, se sono $>0$ la densità cresce, ma può anche verificarsi che diverga all'infinito (\textit{shell crossing}). Nel caso in cui tutti e tre gli autovalori siano uguali si ha espansione/collasso sferico, altrimenti è ellissoidale. Per due negativi e uno positivo collasso planare e per due positivi e uno negativo collasso su un filamento. Questo modello regge bene fino a $\delta\sim 5$, ma può essere sviiluppato a ordini superiori. 
+Si può dimostrare che la formazione delle strutture avviene inizialmente su piani (\textit{pancake di Zeldovich}), mentre al passare del tempo sono preferite strutture filamentose che convergono in nodi. 
+
+\section{Collasso sferico}
+Si considerano le perturbazioni come universi chiusi immersi in un universo di background EdS e si assume che siano perfettamente sferiche e ferme rispetto al flusso di Hubble $v_{pec}=0$. Nella Sezione \ref{ch6:chilovoleva} era stato ricavato l'andamento delle perturbazioni dopo l'equivalenza che rispetto un generico istante iniziale diventa:
+\begin{equation}
+    \delta = \delta_+ \left(\frac{t}{t_i}\right)^{2/3} + \delta_- \left(\frac{t}{t_i}\right)^{-1}\label{eq9:delta}
+\end{equation}
+ora la perturbazione decrescente non viene più trascurata. In regime lineare: $v = ia\dot{\delta}/k_x $, inoltre in un universo EdS: $a\propto t^{2/3}$ (per i tempi in esame). Indicando con il pedice $x$ le coordinate comoventi e con $r$ quelle fisiche ($k_r = k_x /a$) si ha: 
+\begin{equation}
+    v= \frac{i}{k_x \left(t/t_i\right)^{-2/3}}\;\frac{1}{t_i}\left[ \frac{2}{3}\delta_+ \left(\frac{t}{t_i}\right)^{-1/3} - \delta_- \left(\frac{t}{t_i}\right)^{-4/3}    \right]  
+\end{equation}
+Applicando l'assunzione $v(t_i)=0$ e l'equazione \ref{eq9:delta} si ha:
+$$
+\delta_- (t_i)= \frac{2}{3}\delta_+(t_i)\quad \rightarrow \quad \delta (t_i) = \frac{5}{3}\delta_+ (t_i)
+$$
+
+Il parametro di densità della perturbazione vale: $\Omega_p(t_i)=\rho_p(t_i) / \rho_{crit} = \Omega (t_i) (1+\delta(t_i))$, dove $\Omega (t_i)$ è il parametro di densità dell'universo di background. La \textbf{condizione per il collasso della perturbazione sferica} è $\Omega_p (t_i)>1$, ossia:
+$$
+\Omega (t_i) (1+\delta(t_i)) > 1
+$$
+Se $\Omega (t_i)\geq 1$ tutte le perturbazioni collassano, mentre se $\Omega (t_i)< 1$ si introduce un \textbf{valore di soglia} che deve essere superato affinché si possa avere collasso:
+\begin{equation}
+    \delta_+ (t_i) > \frac{3}{5}\left(\frac{1-\Omega (t_i)}{\Omega (t_i)}\right)
+\end{equation}
+
+La condizione per un universo di background di Friedmann con sola materia diventa:
+$$
+\delta_+ (t_i) > \frac{3}{5}\frac{1-\Omega_i}{\Omega_i (1+z_i)}
+$$
+Questo significa che esiste una soglia che va superata in tempo utile (aumenta col tempo) se si vuole avere collasso. Questa è sempre superata in universi chiusi e piatti $\Omega_i \geq 1$, ma non per quelli aperti. L'evoluzione del piccolo universo chiuso con cui è stata approssimata la perturbazione prevede un $t_{max}$ a cui si ha un $a_{max}$, $\dot{a}(t_{max})$ e quindi una successiva contrazione (\textit{big crunch}), inoltre $\rho_p (t_{max})\propto a_{max}^{-3}$. Si può dimostrare che la densità della perturbazione al tempo del massimo vale:
+\begin{equation}
+    \rho_p (t_{max})=\frac{3\pi }{32\; G} \; \frac{1}{t_{max}^2}
+\end{equation}
+Confrondola con la densità del background ($\rho(t_{max})=(6\pi \; G \; t_{max}^2)^{-1}$) si ottiene:
+$$
+\chi (t_{max}):= \frac{\rho_p(t_{max})}{\rho (t_{max})}= \frac{9\pi^2}{16}\approx 5.6 \qquad \rightarrow\qquad \delta^{nLin} (t_{max})= \chi -1 \approx 4.6
+$$
+ovvero, al momento del \textit{turnaround}, la perturbazione è già altamente non lineare e le assunzioni fatte per questo modello non valgono più. Seguendo puramente la trattazione lineare avremmo ottenuto un valore:
+$$
+\delta_+^{lin}(t_{max})=\frac{3}{5} \left(\frac{3\pi}{4}\right)^{2/3}\approx 1.07
+$$
+Il risultato è sbagliato di un fattore 4 e deve ancora iniziare il collasso vero e proprio.
+
+
+
+\section{Fase di virializzazione}
+Ci si aspetta che la perturbazione, assunta come universo chuiso, ricollassi su sé stessa in un tempo $t_{coll}=2t_{max}$. Tuttavia le perturbazioni di materia non possono collassare in un punto: entrano in gioco il riscaldamento nel caso di materia barionica e la dispersione di velocità nel caso di materia oscura. La perturbazione si virializza su un dato raggio calcolabile dal teorema del viriale:
+\begin{equation*}\left\{
+    \def\arraystretch{1.5}
+        \begin{array}{ll}
+            2T+V=0 \\
+            E=T+V
+    \end{array}\right. \quad\Leftrightarrow  \quad E(t_{vir})=\frac{V}{2}= -\frac{1}{2}\frac{3}{5}\frac{G M^2}{R_{vir}}\equiv E(t_{max})=-\frac{3}{5}\frac{GM^2}{R_{max}}
+\end{equation*}
+dove si è posto per conservazione dell'energia, $E(t_{vir})\equiv E(t_{max})$, periodo in cui la velocità e quindi l'energia cintica è nulla. Da questa relazione si ha che la perturbazione si virializza quando: $R_{vir}=R_{max}/2$, ossia quando $\rho_p (t_{vir})=8 \rho_p (t_{max})$. Le simulazioni mostrano che il tempo in cui avviene la virializzazione è $t_{vir}\simeq 3 t_{max}$. Con questi dati si possono stimare due quantità fondamentali:
+\begin{equation}\left\{
+    \def\arraystretch{1.5}
+        \begin{array}{ll}
+        \frac{\rho_p (t_{coll})}{\overbar{\rho}(t_{coll})}=8 \frac{\rho_p (t_{max})}{\overbar{\rho}(t_{max})}\left(\frac{t_{coll}}{t_{max}}\right)^2 \simeq 180\\
+        \frac{\rho_p (t_{vir})}{\overbar{\rho}(t_{vir})}=8 \frac{\rho_p (t_{max})}{\overbar{\rho}(t_{max})}\left(\frac{t_{vir}}{t_{max}}\right)^2 \simeq 400
+    \end{array}\right. 
+\end{equation}
+dove si è utilizzata la quantità $\chi (t_{max})$ calcolata nella sezione precedente. Questi due valori corrispondono a dei $\delta$ (sottraendo 1) decisamente non lineari. Svolgendo ingenuamente i conti con la teoria puramente lineare, si sarebbe ottenuto:
+\begin{equation}\left\{
+    \def\arraystretch{1.5}
+        \begin{array}{ll}
+        \delta^{lin}(t_{coll})=\delta^{lin}(t_{max})\left(\frac{t_{coll}}{t_{max}^{2/3}\simeq 1.68\\
+        \delta^{lin}(t_{vir})=\delta^{lin}(t_{max})\left(\frac{t_{vir}}{t_{max}^{2/3}\simeq 2.2
+    \end{array}\right. 
+\end{equation}
+
+\section{Funzione di massa}
+
+
+
+\section{Simulazioni numeriche}

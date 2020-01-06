@@ -275,3 +275,10 @@ L'\textbf{altezza delle perturbazioni}
     \caption{In verde tratteggiato l'evoluzione classica delle perturbazioni gaussiane. In rosso l'evoluzione assunta per evitare valori inferiori a $-1$. L'area sottesa non deve cambiare (=1), pertanto la distribuzione viene distorta.}\label{fig8:ultima}
 \end{figure}
 
+
+
+Ll'evoluzione di una distribuzione gaussiana è problematica se è richiesto fisicamente $\delta > -1$. Un'alternativa è ricorrere a una distribuzione dei picchi lognormale (P. Coles \& B. Jones, 1991) scegliendo come ansatz $\rho /\overbar{\rho} = 1+\delta_{nLin} \propto e^{\delta_{Lin}}$. La varianza lognormale è legata a quella gaussiana dalla relazione: $\sigma_{nLin}^2 = e^{\sigma^2}-1$, pertanto la funzione di distribuzione di probabilità diventa:
+\begin{equation}
+    f(1+\delta_{nLin})= \frac{1}{(1+\delta_{nLin})\sqrt{2\pi \ln(1+\sigma_{nLin}^2)}}e^{-\frac{\ln^2\left((1+\delta_{nLin})/\sqrt{1+\sigma_{nLin}^2}\right)}{2 \ln(1+\sigma_{nLin}^2)}}
+\end{equation}
+Mappando la distribuzione e sfruttanto le proprietà dei campi gaussiani si riduce la complessità delle simulazioni fatte con questo modello. 
