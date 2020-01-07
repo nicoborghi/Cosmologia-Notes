@@ -69,7 +69,7 @@ $$
 $$
 ovvero, al momento del \textit{turnaround}, la perturbazione è già altamente non lineare e le assunzioni fatte per questo modello non valgono più. Seguendo puramente la trattazione lineare avremmo ottenuto un valore:
 $$
-\delta_+^{lin}(t_{max})=\frac{3}{5} \left(\frac{3\pi}{4}\right)^{2/3}\approx 1.07
+\delta^{lin}(t_{max})=\frac{3}{5} \left(\frac{3\pi}{4}\right)^{2/3}\approx 1.07
 $$
 Il risultato è sbagliato di un fattore 4 e deve ancora iniziare il collasso vero e proprio.
 
@@ -94,15 +94,126 @@ dove si è posto per conservazione dell'energia, $E(t_{vir})\equiv E(t_{max})$, 
 \end{equation}
 dove si è utilizzata la quantità $\chi (t_{max})$ calcolata nella sezione precedente. Questi due valori corrispondono a dei $\delta$ (sottraendo 1) decisamente non lineari. Svolgendo ingenuamente i conti con la teoria puramente lineare, si sarebbe ottenuto:
 \begin{equation}\left\{
-    \def\arraystretch{1.5}
-        \begin{array}{ll}
-        \delta^{lin}(t_{coll})=\delta^{lin}(t_{max})\left(\frac{t_{coll}}{t_{max}^{2/3}\simeq 1.68\\
-        \delta^{lin}(t_{vir})=\delta^{lin}(t_{max})\left(\frac{t_{vir}}{t_{max}^{2/3}\simeq 2.2
-    \end{array}\right. 
+    \begin{array}{l}
+    \delta^{lin}(t_{coll})=\delta^{lin}(t_{max})\left(\frac{t_{coll}}{t_{max}}\right)^{2/3}\simeq 1.68\\
+    \delta^{lin}(t_{vir})=\delta^{lin}(t_{max})\left(\frac{t_{vir}}{t_{max}}\right)^{2/3}\simeq 2.2
+\end{array}\right. 
 \end{equation}
 
-\section{Funzione di massa}
+La teoria non lineare predice giustamente numeri molto grandi, simili a quelli osservati nelle strutture formate, quella lineare sbaglia di due ordini di grandezza. I limiti della trattazione non lineare svolta sono: collasso sferico (l'approssimazione di Zeldovich suggerisce che è impossibile che due autovalori siano perfettamente uguali), la dipendenza forte dalla cosmologia (densità media della materia legata a $\Omega_m$, evoluzione con $t^2$ dovuta all'assunzione EdS). In regime lineare i numeri sono compleatamente sballati, ma dipendono molto meno dalla cosmologia (e.g. $1.68\pm 0.05$). In ogni caso gli osservativi utilizzano, a partire dalle regioni più interne: $R_{2500}, R_{500}, R_{200}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9 \textwidth]{Pictures/9/Padmanabhan.jpg}
+    \caption{Evoluzione di una regione sovredensa in approssimazione sferica \textit{top-hat}. Dopo $a_{coll}$ il contrasto continua a crescere perché diminuisce la densità di background (From Padmanabhan Theoretical Astrophysics: Volume 3, Galaxies and Cosmology).}
+\end{figure}
+
+
+
+\section{Teoria di Press–Schechter}
+La funzione di massa rappresenta la densità numerica di oggetti con massa compresa tra $M$ e $M+\d{M}$. Ammettendo che tutti gli oggetti abbiano lo stesso rapporto massa/luminosità (falso), si traduce nella funzione di luminosità: 
+\begin{equation}
+    \d{N}=n(M)\d{M} = \Phi(L)\d{L} \qquad \rightarrow \qquad \Phi(L)=n(M)\frac{\d{M}}{\d{L}}\simeq n(M)\left\langle \frac{M}{L} \right\rangle 
+\end{equation}
+Da un punto di vista teorico si studia la funzione di massa e non quella di luminosità perché i barioni fanno brutte cose. Il modello più interessante è la funzione di massa di Press-Schechter, legato alla funzione di luminosità di Schechter. Il campo di densità filtrato su una certa scala $R$ è stato descritto con l'operazione di convoluzione, in particolare: $\delta_M (\vec{x})=\delta(\vec{x}) * W(R)$. La distibuzione delle perturbazioni attuale è rappresentata in figura \ref{fig8:ultima}, per conoscere quanti oggetti si sono formati bisognerebbe integrare la curva a partire da $\delta_M = 180$ (assumendo EdS). Sia la non-gaussiana, sia il valore $180$ non sono ricavabili facilmente e hanno forti dipendenza dalle assunzioni, come già discusso. 
+
+I signori Press e Schechter hanno pensato che modellando l'evoluzione in regime lineare (la gaussiana si allarga, ma rimane gaussiana) e utilizzando quindi la soglia calcolata in tale approssimazione ($\delta^{lin}(t_{coll})=1.68$), i due errori si auto-compensano. La massa che finisce negli oggetti che collassano è quindi quella corrispondente alla coda gaussiana superiore alla soglia $1.68$. Le simulazioni confermano la bontà di questa approssimazione.
+
+Dato che l'operazione di filtraggio non altera la gaussianità primordiale si ha:
+\begin{equation*}
+    P(\delta_M)=\frac{1}{\sqrt{2\pi \sigma_M^2}}e^{-\delta_M / (2\sigma_M^2)}\quad \to \quad P_{>\delta_{coll}}(M)=\int_{1.68}^\infty P(\delta_M)\d{\delta_M}= \frac{1}{2}\left[1-\mathrm{erf}\left(\frac{\delta_{coll}}{\sqrt{2}\sigma_M}\right)\right]
+\end{equation*}
+La cosmologia entra pochissimo in $\delta_{coll}$, ma pesantemente in $\sigma_M=f(M,z)$. La probabilità che avvenga il collasso anche per un oggettesimo di massa $M= 0$ ($R\to 0$, $\sigma_M \to \infty$, $\mathrm{erf}\to 0$) tende a $1/2$, nonostante per definizione dovrebbe essere $1$ (non si è posto nessun filtro limite). Questo è dovuto al fatto che si sta ignorando il contributo della parte sottodensa, ma anche questa potrebbe contribuire al collasso, pertanto si metterà a mano un fattore $2$ (proprietà di simmetria della gaussiana). Per rifasi alla definizione di funzione di massa si ha l'uguaglianza:
+\begin{equation*}
+    2\: \left[P_{>\delta_{coll}}(M)-P_{>\delta_{coll}}(M+\d{M})\right]\frac{\overbar{\rho}_m }{M}\d{M}=n(M)\d{M}
+\end{equation*}
+La quantità fra parentesi quadre è necessariamente positiva perchè filtrando su scale maggiori la probabilità (varianza di massa) diminuisce. Proseguendo con i conti:
+\begin{equation*}
+    n(M)\d{M}= 2 \overbar{\rho}_m \left\lvert \frac{\d{P_{>\delta_{coll}}}}{\d{\sigma_M}}\right\rvert \left\lvert \frac{\d{\sigma_M}}{\d{M}}\right\rvert \d{M}=2 \overbar{\rho}_m\; \frac{1}{\sqrt{2\pi \sigma_M^2}}\frac{\delta_{coll}}{\sigma_M}e^{-\delta_{coll}/(2\sigma_M^2)}\; \frac{\sigma_M}{M} \left\lvert \frac{\d{\ln \sigma_M}}{\d{\ln M}}\right\rvert \; \d{M}
+\end{equation*}
+dove si utilizza la derivata rispatto al logaritmo perché la funzione è puù smooth. La \textbf{funzione di Press-Schechter} è quindi:
+\begin{equation}
+    n(M)\d{M}= \sqrt{\frac{2}{\pi}}  \;\frac{\overbar{\rho}_m\; \delta_{coll}}{\sigma_M\; M^2}\left\lvert \frac{\d{\ln \sigma_M}}{\d{\ln M}}\right\rvert \; \d{M}
+\end{equation}
+
+\vspace{1em}
+Assumendo uno spettro power-law del tipo: $\sigma_M\propto (M/M_0)^{-\alpha}$ dove $\alpha = (n+3)/6$ e svolgendo la sostituzione: $M_*^2=M_0^2 (2/\delta_{coll})^{1/2\alpha}$, si ha:
+\begin{equation}
+    n(M)\d{M}= \sqrt{\frac{2}{\pi}} \frac{\overbar{\rho}_m\; \alpha}{M_*^2}\left(\frac{M}{M_*}\right)^{\alpha -2} e^{-(M/M_*)^{2\alpha}}\d{M}
+\end{equation}
+Si ha un taglio esponenziale che agisce dalla massa $M_*$ preceduto da un andamento a legge di potenza con esponente $\alpha-2$. La stessa situazione si ha per la funzione di luminosità assumendo un rapporto $M/L$ costante al variare della massa. Osservativamente si ha una pendenza $\approx -1$ per le galassie, che si traduce in un $\alpha -2=1 \to n = 3$. Questo valore non è compatibile con i valori aspettati ($n\approx -2$) per l'indice dello spettro della CDM su scala delle galassie. Ossia, c'è una sovrabbondanza di aloni di materia oscura rispetto alle galassie (non c'è una relazione 1:1) su scale così piccole. Questo è dovuto ai barioni.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75 \textwidth]{Pictures/9/ps.jpg}
+    \caption{fig:4}
+\end{figure}
+
+La quantità $M_*$ è legata alla massa tipica degli oggetti che si stanno formando in un dato periodo. Oggi $M_*$ corrisponde a quella degli ammassi di galassie ($10^{15}M_\odot$). Nonostante ne sia previsto un piccolo numero, questi oggetti massicci sono facili da detectare e dipendono poco dalla miscrofisica: studiando la coda della funzione di massa si possono porre ottimi contraints. La funzione di massa può essere tradotta sotto forma di probabilità di trovare oggetti di data temperatura, luminosità X o dispersione di velocità: $T_x\propto \langle v^2\rangle \propto M^{2/3}(1+z)$; $L_x \propto R^3 n^2 T_x^{1/2}\propto M^{4/3}(1+z)^{7/2}\propto T_x^2 (1+z)^{3/2}$ (valide assumendo solo il contributo della gravità).  
+
+In conclusione, la formula è approssimata: si assume collasso sferico (si può correggene analiticamente per il collasso ellisoidale, Sheth \& Tormen), si è inserito in modo arbitrario il fattore 2 (si può verificare con la teoria dei random walk che è corretto). Se ci si fida delle simulazioni N-body (anche lasciando libero $\delta_{coll}$), si hanno forme più complesse (Tinker, Despali...), ma non troppo diverse. La cosmologia si nasconde in $\overbar{\rho}_m$, fortemente sensibile a $\Omega_m$ e in $\sigma_M^2\propto \int k^2 \mathcal{P}(k)W^2(k,R)\d{k}$ sensibile fortemente alla normalizzazione $A$ e leggermente (perché integrato) a $n_s$ e alla funzione di trasferimento $T^2(k)$. Per superare una data soglia $\delta_{coll}$ a un dato tempo $t$ si hanno infinite combinazioni possibili di $A$ e $\Omega_m$, e.g. aumentando $A$ in un universo con $\Omega_m$ minore ($\delta_+ \propto \Omega_m^{0.55}$). Vi è degenerazione tra $\Omega_m$ e $\sigma_8$ (in letteratura si usa questo valore definito in precedenza). 
+
+In particolare gli ammassi sono sensibili a:
+\begin{equation}
+    S_8 := \sigma_8 \left(\frac{\Omega_m}{0.3}\right)^{0.5}
+\end{equation}
+che viene quindi misurata contando gli ammassi. Per rompere la degenerazione è necessario contare gli ammassi al variare del redshift e studiare l'evoluzione di $n(M)$. Guardando indietro nel tempo, ci si aspetta più ammassi negli universi a basso $\Omega_m$ rispetto a quelli ad alto $\Omega_m$ (ma sempre meno rispetto al numero attuale). L'unico problema non piccolo è che la massa non è un osservabile diretto.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[]{\includegraphics[width=.5\textwidth]{Pictures/9/nmz.eps}}$\;\;$
+    \subfloat[]{\includegraphics[width=.455\textwidth]{Pictures/9/psevol.jpg}}
+    \caption{(a) La funzione $n(M,z)$ da la densità comovente di aloni meno massicci di M. Linea continua: modello Shet-Tormen, linea tratteggiata: modello Press-Shechter, pallini rossi: simulazione Millennium Run. (From Springel: https://www.nature.com/articles/nature03597); (b) L'evoluzione di un'altra quantità, $n(>M,z)$ da un'altra prospettiva.}
+\end{figure}
+
 
 
 
 \section{Simulazioni numeriche}
+Le simulazioni numeriche vengono divise in due grandi classi: quelle puramente n-body e quelle idrodinamiche che includono anche effetti barionici su diverse scale (eventualmente shocks, ecc...). Il modello di base di formazione delle strutture si basa sulle instabilità gravitazionali guidate dalla materia oscura. L'universo viene suddiviso in tanti volumetti (particelle) e la sua evoluzione può essere studiata risolvendo il problema degli n-body: essendo $n\gg 3$ si ricorre all'integrazione numerica. 
+Il set di equazioni più semplici è: 
+\begin{equation}\left\{
+    \def\arraystretch{1.5}
+        \begin{array}{ll}
+        F_i = Gm_i \sum_{i\neq j} m_j/r_{ij}^2 \\
+        v_i(t+\Delta t)=v_i (t)+\frac{F_i}{m_i} \Delta t + \mathcal{O} (\Delta t^2) \\
+        x_i(t+\Delta t)=x_i (t)+v_i \Delta t + \mathcal{O} (\Delta t^2)
+    \end{array}\right. 
+\end{equation}
+
+Inizialmente si calcola la forza e il modo in cui viene svolto questo processo definisce diverse categorie di codici n-body:
+
+\begin{example}[Particle-Particle (PP)]
+    La forza che agisce sulla $i-esima$ particella viene calcolata in modo naturale sommando i contributi di tutte le altre particelle, una ad una. $$ \vec{F}_i \propto \frac{\vec{x}_i-\vec{x_j}}{|\vec{x}_i-\vec{x_j}|^3}$$È molto semplice costruire il codice, ma è molto costoso dal punto di vista computazionale. Con $N$ particelle le distanze da calcolare diventano $N^2$ ad ogni passo temporale, pertanto diventa anche difficile aumentare la risoluzione della simulazione. Inoltre, se due particelle si avvicinano troppo, la forza diverge all'infinito (non avviene fisicamente ed è brutta numericamente), quindi si introduce un parametro di \textit{softening} della forza. In questo modo si può impedire che due oggetti si avvicinino di più della loro dimensione. 
+    \\ ${\color{green} \blacktriangle  } $ Calcolo esatto della forza tra particelle (importante per sistemi collisionali). \\ ${\color{red} \blacktriangledown } $ Complessità $\mathcal{O} (N^2)$, softening necessario per evitare divergenza.
+ 
+\end{example}   
+
+
+\begin{example}[Particle Mesh (PM)]
+ Si trattano come quantità di campo tutte le quantità che possono essere assunte tali. Densità, potenziale gravitazionale e quindi forza vengono calcolate interpolando quantità in griglia. $$ \rho (\vec{x}_{ijk})=\sum_{l=1}^N W(\vec{x}_l - \vec{x}_{ijk}) \; \rho(\vec{x}_l)$$ Cioè la densità in un punto ${ijk}$ della griglia si ottiene pesando i contributi di tutte le altre particelle attraverso il cosiddetto \textit{kernel} $W$ che determina l'interpolazione. Un $W$ gaussiano non andrebbe mai a zero, altri filtri interezzanti sono:
+ \begin{itemize}
+     \item[-] \textbf{Nearest Grid Point} (NGP): ogni particella contribuisce solo al nodo più vicino. La densità diventa discontinua.
+     \item[-] \textbf{Cloud In Cell} (CIC): ogni particella contribuisce solo ai 4 nodi più vicini in maniera inversamente proporzionale al quadrato della distanza (2D). La derivata prima è discontinua.
+     \item[-] \textbf{Triangular Shaped Cloud} (TSC): ogni particella contribuisce solo ai 8 nodi più vicini in maniera inversamente proporzionale al quadrato della distanza (3D). In questo caso, la funzione è più smooth e la discontinuità si è spostata alla derivata seconda. In genere si utilizza questo.
+ \end{itemize}
+
+ Partendo dalle posizioni delle particelle si calcolano le densità per ogni punto griglia utilizzando le interpolazioni precedenti. Utilizzando la griglia regolare, si possono semplificare le equazioni trasformandole nello spazio di Fourier: $\delta\to \delta_k$, in questo modo diventano semplici moltiplicazioni. La forza ottenuta dello spazio di Fourier si antitrasforma per avere la forza nello spazio reale su ogni punto della griglia. La forza che agisce sulla particella $i-esima$ si ottiene interpolando.
+
+[Quindi in questo modo posso fregare la gravità (non locale) e calcolarla utilizzando una quantità locale $\delta_k$... no, bugia! $\delta_k$ ha informazioni su tutte le scale $k$, la gravità non ha cambiato la sua natura, ad oggi... ]
+ \\ ${\color{green} \blacktriangle  }$ Complessità $\mathcal{O} (N\log N)$. 
+ \\ ${\color{red} \blacktriangledown } $ Risoluzione limitata dalla costruzione della griglia. Migliorabile combinandolo col metodo Particle-Particle, \textbf{codici P3M}: conti diretti per particelle vicine, in griglia per particelle lontane). Migliorabile anche con metodi che rifiniscono la griglia: \textbf{Adaptive Particle Mesh}.
+
+\end{example}  
+
+\begin{example}[Tree code (HT)]
+   Sfruttano il concetto di baricentro e la teoria dei grafi. Inizialmente si costruisce un albero gerarchico: ogni regione viene scomposta in sottoregioni fintantoché non contiene al più una particella (Fig. \ref{fig9:treecode}). Se una regione è arbitrariamente molto distante dalla particella $i-esima$ in analisi, viene trattata come un'unica particellona e non vengono considerate le sue sottoregioni. Più ci si avvicina alla particella, più si scompongono i contributi delle sottoregioni (si scende di gerarchia). Eventualmente, nelle zone prospicienti si potrebbe calcolare direttamente la forza tra due particelle come nel metodo PP. Può essere problematico memorizzare tutti i livelli dell'albero gerarchico, ma è più efficiente 
+   \begin{figure}[H]
+    \centering
+    \includegraphics[width=.95 \textwidth]{Pictures/9/treecode.jpg}
+    \caption{Funzionamento di un tree code in due dimensioni. L'albero generato alla fine del processo ha 3 livelli. Per esempio, per calcolare la forza che agisce sulla particella 8 si calcola la distanza dal baricentro dei quadratoni tracciati al secondo step. Quello in alto a destra può essere considerato sufficientemente lontano: le particelle 4, 5, 6 vengono viste come un'unica particellona. Il quadrato in basso a destra viene preso così com'è perché contiene già solo una particella. }\label{fig9:treecode}
+\end{figure}
+xddd
+\\ ${\color{green} \blacktriangle  }$ Complessità $\mathcal{O} (N\log N)$. 
+\\ ${\color{red} \blacktriangledown } $ .
+\end{example}  
