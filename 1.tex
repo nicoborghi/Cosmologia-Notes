@@ -125,7 +125,7 @@ definiscono quindi:
 
 Esistono diverse definizioni possibili di `distanza'.
 
-\subsection{Distanza Propria}
+\subsection{Distanza propria}
 Si assume di fare una misura istantanea (\(\mathrm{d}t=0\)) della
 distanza tra sorgente e osservatore (non è possibile in relatività).
 Inoltre si può assumere~ \(\mathrm{d}\theta=\mathrm{d}\varphi=0\) senza perdere di generalità:
@@ -134,14 +134,14 @@ Inoltre si può assumere~ \(\mathrm{d}\theta=\mathrm{d}\varphi=0\) senza perdere
 \arcsin r& k=+1\\ 
 r & k=0\\ 
 \mathrm{arcsinh}\:  r & k=-1
-\end{matrix}\right.
+\end{matrix}\right.\label{eq1:mathfrankf}
 \end{equation}
 
 Se~\(a=a\left(t\right)\), allora~\(d_{PR}=d_{PR}(t)\) e si può derivare la
 velocità radiale:
 \begin{align*}
-v_R & =\frac{\mathrm{d}d_{PR}}{\mathrm{d}t}=\frac{\dot{a}}{a}d_{PR}=H\,d_{PR}  \\
-H & :=\frac{\dot{a}}{a}\quad [\mathrm{s^{-1}}]
+v_R & =\frac{\mathrm{d}d_{PR}}{\mathrm{d}t}=\frac{\dt{a}}{a}d_{PR}=H\,d_{PR}  \\
+H & :=\frac{\dt{a}}{a}\quad [\mathrm{s^{-1}}]
 \end{align*}
 
 In base a questa relazione, detta~\textbf{legge di Hubble-Lemaitre},
@@ -209,7 +209,7 @@ sorgente in moto relativo (effetto Doppler), ma non esiste una velocità
 effettiva di allontanamento: è lo spazio che si dilata.
 
 
-\subsection{Distanza di Luminosità}
+\subsection{Distanza di luminosità}
 
 Si definisce a partire dalla relazione tra luminosità~\(L [erg/s]\)
 e flusso~\(l\) considerando i seguenti effetti:
@@ -226,7 +226,7 @@ e flusso~\(l\) considerando i seguenti effetti:
 l=\frac{L}{4\pi d_L^2}\equiv\frac{L}{4\pi a_0^2r^2}\frac{a^2}{a_0^2}=\frac{L}{4\pi a_0^2r^2}\frac{1}{(1+z)^2}\qquad d_L := a_0 r (1+z)
 \end{equation}
 
-\subsection{Distanza (di diametro) Angolare}
+\subsection{Distanza (di diametro) angolare}
 
 Si definisce misurando le dimensioni angolari di un righello standard,
 ossia di una classe di oggetti astrofisici che hanno la stessa
@@ -274,8 +274,8 @@ Tutte le distanze possono essere riscritte in funzione di un unico
 parametro $a=a(t)$. Sviluppandolo in serie per $t\to t_0$ si ha:
 \begin{equation}
 a(t)\simeq a_0\left ( 1+H_0 (t-t_0)-\frac{1}{2}q_0\,H_0^2(t-t_0)^2  \right )\qquad 
-H:=\frac{\dot{a}}{a}; \quad
-q:=-\frac{\ddot{a} a}{\dot{a}^2} 
+H:=\frac{\dt{a}}{a}; \quad
+q:=-\frac{\ddt{a} a}{\dt{a}^2} 
 \end{equation}
 
 dove $q$ è detto \emph{parametro di decelerazione} ed è adimensionale. Viene definito col meno perché in passato i modelli facevano propendere per un'espansione dell'universo decelerata. 

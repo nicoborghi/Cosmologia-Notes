@@ -13,7 +13,10 @@ Osservativamente si misura la quantità: $\frac{\delta T }{T} (\theta, \phi)=\fr
 \begin{equation}
     \delta_T (\theta, \phi) = \sum_{l=0}^\infty \sum_{m=-l}^{l}a_{lm}Y_{lm} (\theta, \phi); \qquad Y_{lm} (\theta, \phi):= \sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}P_l^m (\cos\theta)e^{i\phi}}
 \end{equation}
-dove $Y_{lm}(\theta, \phi)$ è un'armonica sferica e $P_l^m$ è il polinomio di Legendre di indici $l$ e $m$ (il primo legato a un angolo sotteso, il secondo a una direzione). L'indice $l$ assume valori tra $0$ e $+\infty$ ed è legato all'inverso dell'angolo $\theta$:
+dove $Y_{lm}(\theta, \phi)$ è un'armonica sferica e $P_l^m$ è il polinomio di Legendre di indici $l$ e $m$ (il primo legato a un angolo sotteso, il secondo a una direzione). 
+
+\newpage
+\noindent L'indice $l$ assume valori tra $0$ e $+\infty$ ed è legato all'inverso dell'angolo $\theta$:
 \begin{itemize}
     \item $l=0$: termine di monopolo, $\theta=360^\circ $;
     \item $l=1$: termine di dipolo, $\theta=180^\circ $;
@@ -37,7 +40,7 @@ Ci sono tre meccanismi principali che causano fluttuazioni di temperatura nell'u
 In reatà sono tutti legati al campo di densità. Le anisotropie vengono divise in due grandi categorie:
 \begin{itemize}
     \item \textbf{Primarie}: originate al momento del last scattering;
-    \item \textbf{Secondarie}: si creano lungo il viaggio del fotone dal last scattering fino a noi (SZ, lensing, ...)
+    \item \textbf{Secondarie}: si creano lungo il viaggio del fotone dal last scattering fino a noi (SZ, lensing)
 \end{itemize}
 
 \subsection{Termine di dipolo}
@@ -81,16 +84,16 @@ Quanto detto è valido fino al momento del disaccoppiamento, qua assunto avvenir
 \begin{figure}[H]
     \centering
     \includegraphics[width=.75 \textwidth]{Pictures/11/OscDrag.eps}
-    \caption{(a) Oscillazioni acustiche tra $-\pi/2 <kx <\pi/2$. Le molle e le palline rappresentano rispettivamente pressione di radiazione e gravità. L'ampiezza delle oscillazioni vale $|\Psi|/3$ dove $\Psi$ è il potenziale newtoniano. Il blueshift dovuto alla pressione del fluido e il redshift dovuto alla gravità si bilanciano. (b)   (From: https://arxiv.org/abs/astro-ph/9604166 CITAAA)}\label{fig11:osc}
+    \caption{Oscillazioni acustiche tra $-\pi/2 <kx <\pi/2$. Le molle e le palline rappresentano rispettivamente pressione di radiazione e gravità. L'ampiezza delle oscillazioni vale $|\Psi|/3$ dove $\Psi$ è il potenziale newtoniano. Il blueshift dovuto alla pressione del fluido e il redshift dovuto alla gravità si bilanciano (From: \cite{Hu_1997}).}\label{fig11:osc}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8 \textwidth]{Pictures/11/angspecmodel.jpg}
-    \caption{Spettro angolare delle futtuazioni in temperatura modellato al variare del parametro di densità dei barioni. (FONTE Piattella CITAAAA) }\label{fig11:cttmodelb}
+    \caption{Spettro angolare delle futtuazioni in temperatura modellato al variare del parametro di densità dei barioni. (From: \cite{Piattella_2018}) }\label{fig11:cttmodelb}
 \end{figure}
 
-Il primo picco è la prima scala di massima compressione dentro l'orizzonte, è quindi legata alla scala dell'orizzonte al momento dell'ultimo scattering. Le oscillazioni acustiche non possono avvenire per $l\to \infty$ perché il Sig. Silk ci ha già detto che esiste una scala di dissipazione per l'oscillazione dei barioni. Il taglio ha un andamento del tipo $l^{-4}$. Osservativamente si ha lo spettro mostrato in Figura \label{fig11:cttobs}.
+Il primo picco è la prima scala di massima compressione dentro l'orizzonte, è quindi legata alla scala dell'orizzonte al momento dell'ultimo scattering. Le oscillazioni acustiche non possono avvenire per $l\to \infty$ perché il Sig. Silk ci ha già detto che esiste una scala di dissipazione per l'oscillazione dei barioni. Il taglio ha un andamento del tipo $l^{-4}$. Osservativamente si ha lo spettro mostrato in Figura \ref{fig11:cttobs}.
 
 
 
@@ -122,7 +125,7 @@ Il fotone può anche interagire con la materia reionizzata dai fenomeni di galax
 
 
 \section{Risultati osservativi}
-Come già discusso, \textbf{la posizione (non il valore) del primo picco} è legata alla scala dell'orizzonte al momento dell'ultimo scattering. Il valore: $R_H(z_{LS})=a(z_{LS})\int_0^{t_{LS}}c \; \d{t} / a(t)$ può esssere in buona approssimazione calcolato per un universo EdS. Questa quantità può essere utilizzata come un righello standard. L'angolo sotteso da questo righello dipende dalla geometria (Fig. CITAAAA): $\Omega_k = 1-\Omega_{TOT}$. All'aumentare di $\Omega_k$ (universo aperto) la scala diventa più piccola e l'intero spettro shifta rigidamente verso $l$ grandi. La posizione osservata (per la prima volta con l'esperimento BOOMERanG) del primo picco, $l=220$, corrisponde esattamente a una geometria piatta.
+Come già discusso, \textbf{la posizione (non il valore) del primo picco} è legata alla scala dell'orizzonte al momento dell'ultimo scattering. Il valore: $R_H(z_{LS})=a(z_{LS})\int_0^{t_{LS}}c \; \d{t} / a(t)$ può esssere in buona approssimazione calcolato per un universo EdS. Questa quantità può essere utilizzata come un righello standard. L'angolo sotteso da questo righello dipende dalla geometria (Fig. \ref{fig:2geom}): $\Omega_k = 1-\Omega_{TOT}$. All'aumentare di $\Omega_k$ (universo aperto) la scala diventa più piccola e l'intero spettro shifta rigidamente verso $l$ grandi. La posizione osservata (per la prima volta con l'esperimento BOOMERanG) del primo picco, $l=220$, corrisponde esattamente a una geometria piatta.
 
 \begin{definition}
     L'evidenza più importante della piattezza dell'universo è aver osservato un angolo sotteso dal raggio dell'orizzonte al momento dell'ultimo scattering corrispondente a $l=220$ ($\theta \approx 1^\circ$), esattamente come previsto da una geometria piatta ($\Omega_{TOT}=1$). Con lo spettro di potenza della materia si osservava invece una combinazione di $\Omega_m$ e $H$ perché il momento dell'equivalenza è altamente determinato dalla quantità della materia.
@@ -138,7 +141,7 @@ Le prime osservazioni delle fluttazioni cosmologiche, predette e richieste dai m
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65 \textwidth]{Pictures/11/falsecmb.jpg}
+    \includegraphics[width=0.8 \textwidth]{Pictures/11/falsecmb.jpg}
     \caption{Spettro angolare delle futtuazioni in temperatura teorico (linea continua) e multipoli osservati tramite la CMB (punti). Le bande shaded sono quelle utilizzate da Planck per mappare, modellare e sottrarre le componenti fastidiose per i cosmologi, ma importanti per i radioastronomi (From: ESA).}\label{fig11:cmbsporca}
 \end{figure}
 
@@ -147,9 +150,11 @@ A questo punto la CMB si scompone in multipoli, mediando su tutti gli $m$ possib
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.72 \textwidth]{Pictures/11/angspecobs.jpg}
-    \caption{Spettro angolare delle futtuazioni in temperatura teorico (linea continua) e multipoli osservati tramite la CMB (punti). Qui, $\mathcal{D}^{TT}_l:= l(l+1)\mathcal{C}_l / (2\pi)$ (From: Plank 2018 CITAAAA).  }\label{fig11:cttobs} 
+    \includegraphics[width=0.89 \textwidth]{Pictures/11/angspecobs.jpg}
+    \caption{Spettro angolare delle futtuazioni in temperatura teorico (linea continua) e multipoli osservati tramite la CMB (punti). Qui, $\mathcal{D}^{TT}_l:= l(l+1)\mathcal{C}_l / (2\pi)$ (From: \cite{collaboration2018planck}).  }\label{fig11:cttobs} 
 \end{figure}
+
+\vspace{1em}
 Chi ha l'occhio molto attento può notare qualche problemino qua e là con il modello ($l=5$, $l\approx 20$, attorno al primo picco, ...). Si parla di \textit{anomalie}. Si è arrivati più o meno ad osservare il settimo picco, $l\simeq 2500 \leftrightarrow \theta \simeq 0.07^\circ$. Notare che la scala è logaritmica per $l<30$ e lineare per $l>30$. Il fit dei dati restituisce constraints sui sei principali parametri cosmologici (numero minimo dei prarametri possibile) e quattro parametri importanti derivati:
 \begin{figure}[H]
     \centering
@@ -161,10 +166,10 @@ Una volta caratterizzati completamente gli effetti cosmologici si possono estrar
 
 Ad oggi ci sono due parametri che danno problemi: $H_0$ come già discusso e $\sigma_8$ (problema interno ai dati di Planck); sugli altri c'è buona convergenza con altri osservabili astrofisici. In particolare il valore di $\sigma_8$ misurato direttamente tramite la CMB è in contrasto con il valore di $\sigma_8$ che si ricava utilizzando campioni di ammassi estratti dalla CMB stessa grazie all'effetto SZ. La differenza può essere lenita dalla presenza dei neutrini.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \subfloat[]{\includegraphics[width=.415\textwidth]{Pictures/11/sz.jpg}}$\;\;$
     \subfloat[]{\includegraphics[width=.5\textwidth]{Pictures/11/szang.jpg}}
-    \caption{(a) Risultato netto dell'effetto SZ sulla CMB. Il corpo nero della CMB è upscatterato a energie maggiori. Osservando la deformazione del corpo nero $\Delta I_\nu$ si nota che il turnover è a $\nu_t \simeq 217$ GHz.  (From: J. Carlstrom); (b) L'effetto SZ agisce su $l$ grandi ed è dovuto a tre fenomeni, di cui quello termico è il più importante (From: Kinetic Sunyaev-Zeldovich Effect from Halo Rotation)} \label{fig11:sz} 
+    \caption{(a) Risultato netto dell'effetto SZ sulla CMB. Il corpo nero della CMB è upscatterato a energie maggiori. Osservando la deformazione del corpo nero $\Delta I_\nu$ si nota che il turnover è a $\nu_t \simeq 217$ GHz.  (From: J. Carlstrom); (b) L'effetto SZ agisce su $l$ grandi ed è dovuto a tre fenomeni, di cui quello termico è il più importante (From: \cite{Cooray_2002})} \label{fig11:sz} 
 \end{figure}
 
 
@@ -176,14 +181,11 @@ Le osservazioni di Plank hanno comfermato il modello dell'oscillatore armonico e
 La polarizzazione $E$ è stata ben misurata, anche sfruttando la cross-correlazione tra il segnale in temperatura e il modo $E$, $TE$. A oggi, 3 gennaio 2020, non c'è alcuna evidenza di onde gravitazionali primordiali. 
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{Pictures/11/eb.jpg}
-    \caption{Spettro di potenza per i modi $E$ e $B$. Il valore $r$ è il \textit{tensor-to-scalar ratio}. Sono mostrati i livelli di sensitivity di WMAP, Plank e quella prevista per CMBPol (EPIC-LC e EPIC-2m), non costruito (from: https://arxiv.org/abs/0811.3911).}
+    \caption{Spettro di potenza per i modi $E$ e $B$. Il valore $r$ è il \textit{tensor-to-scalar ratio}. Sono mostrati i livelli di sensitivity di WMAP, Plank e quella prevista per CMBPol (EPIC-LC e EPIC-2m), non costruito (From: \cite{Baumann_2009}).}
 \end{figure}
-
-
-
 
 \subsection{Oscillazioni acustiche barioniche (BAO)}
 Sono una delle prove fondamentali che svolgerà Euclid. I picchi sullo spettro angolare della CMB (dovuti alle oscillazione acustiche dei barioni nelle buche di potenziale della materia oscura) lasciano un'impronta sulla distribuzione a grande scala. Osservandole, si può misurare come varia il righello standard dell'orizzonte cosmologico al variare del redshift. 
@@ -195,20 +197,19 @@ Il fenomeno può essere semplificato come segue. Si consideri una singola pertur
 
 La prima evidenza osservativa di BAO è ad opera di Eisenstein e collaboratori (Fig. \ref{fig11:baoobs}), che analizzando la funzione di correlazione delle galassie della SDSS hanno trovato la feature a circa $100 h^{-1}$ Mpc.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{Pictures/11/BAO.jpg}
-    \caption{Spettro di potenza per CMB (radiazione) e LSS (materia). Non assomigliano a quelli visti perché hanno diverse normalizzazioni. (from: Baryonic signatures in large-scale structure).}\label{fig11:bao}
+    \caption{Spettro di potenza per CMB (radiazione) e LSS (materia). Non assomigliano a quelli visti perché hanno diverse normalizzazioni. (From: \cite{Meiksin_1999}).}\label{fig11:bao}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{Pictures/11/baoobs.jpg}
-    \caption{Funzione di correlazione nello spazio dei redshift costruita dal campione SDSS LRG. Il bump è statisticamente significativo. (from: DETECTION OF THE BARYON ACOUSTIC PEAK IN THE LARGE-SCALE
-    CORRELATION FUNCTION OF SDSS LUMINOUS RED GALAXIES
-    ).}\label{fig11:baoobs}
+    \caption{Funzione di correlazione nello spazio dei redshift costruita dal campione SDSS LRG. Il bump è statisticamente significativo. (From: \cite{Eisenstein_2005}).}\label{fig11:baoobs}
 \end{figure}
 
+\vfill
 \textit{Complimenti per essere arrivati fino a qui, grazie per l'attenzione e speriamo che Euclid non cambi troppo le carte in tavola. A seguire qualche spunto per approfondire i temi trattati}.
 
 \vspace{1em}

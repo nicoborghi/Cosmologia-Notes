@@ -1,12 +1,11 @@
 \chapterimage{/10/head.jpg} % Chapter heading image
 \chapter{Clustering}\label{10:ch}
-Con il termine \textit{clustering} si intendono le proprietà di distribuzione della materia su grande scala. Il clustering viene studiato in modo statistico: si utilizzano principalmente la funzione di correlazione (Paragrafo CITAAAA) e la sua trasfomata di Fourier. Entro un volumetto $\d{V_1}$ la probabilità di trovarvi un oggetto è $\d{P_1}=\overline{n}\d{V_1}$, dove $\overline{n}$ è l densità media di oggetti. La probabilità congiunta di avere un oggetto in due generici volumi, nel caso in cui le singole probabilità siano completamente indipendenti, vale: $\d{P}_{12}=\overline{n}^2 \d{V_1}\d{V_2}$. L'eccesso o il difetto di probabilità rispetto alla distribuzione casuale che darebbe questo risultato è detta \textbf{funzione di correlazione spaziale a due punti}, $\xi(\vec{r}_{12})$. Assumendo isotropia: $\xi(\vec{r}_{12})=\xi(r)$, pertanto si ha la seguente relazione: 
+Con il termine \textit{clustering} si intendono le proprietà di distribuzione della materia su grande scala. Il clustering viene studiato in modo statistico: si utilizzano principalmente la funzione di correlazione (Sezione \ref{ch8:statistic}) e la sua trasfomata di Fourier. Entro un volumetto $\d{V_1}$ la probabilità di trovarvi un oggetto è $\d{P_1}=\overline{n}\d{V_1}$, dove $\overline{n}$ è l densità media di oggetti. La probabilità congiunta di avere un oggetto in due generici volumi, nel caso in cui le singole probabilità siano completamente indipendenti, vale: $\d{P}_{12}=\overline{n}^2 \d{V_1}\d{V_2}$. L'eccesso o il difetto di probabilità rispetto alla distribuzione casuale che darebbe questo risultato è detta \textbf{funzione di correlazione spaziale a due punti}, $\xi(\vec{r}_{12})$. Assumendo isotropia: $\xi(\vec{r}_{12})=\xi(r)$, pertanto si ha la seguente relazione: 
 \begin{equation}
     \d{P}_{12}=\overline{n}^2 \d{V_1}\d{V_2} \left(1+\xi(r)\right)
 \end{equation}
-Per $\xi = 0$ la distribuzione è uniforme, per $\xi >0$ si parla di \textbf{correlazione} e per $\xi <0$ di \textbf{anti-correlazione}. La funzione di correlazione era già stata definita nel caso continuo come correlazione fra il campo $\delta$ e sé stesso in dui punti distanti $r$: $\xi (r)=\langle \delta (x)\delta(x+r) \rangle $. L'uguaglianza tra le due definizioni si può dimostrare facilemente assumendo che tutte le particelle dell'universo abbiano massa uguale. 
 
-Facendo uso del teorema di Bayes si può riscrivere in generale:
+Per $\xi = 0$ la distribuzione è uniforme, per $\xi >0$ si parla di \textbf{correlazione} e per $\xi <0$ di \textbf{anti-correlazione}. La funzione di correlazione era già stata definita nel caso continuo come correlazione fra il campo $\delta$ e sé stesso in dui punti distanti $r$: $\xi (r)=\langle \delta (x)\delta(x+r) \rangle $. L'uguaglianza tra le due definizioni si può dimostrare facilemente assumendo che tutte le particelle dell'universo abbiano massa uguale. Facendo uso del teorema di Bayes si può riscrivere in generale:
 \begin{equation}
     \d{P_{12}}= \d{P}(1,2) = \d{P}(1) \d{P}(2|1)\quad \rightarrow \quad \d{P}(2|1)=\overbar{n}\d{V_2}\left(1+\xi(r)\right)
 \end{equation}
@@ -18,7 +17,7 @@ dove il secondo termine è quello che rappresenta la deviazione dalla distribuzi
 $$
 \xi(r)\propto \left(\frac{r}{r_0}\right)^{-\gamma} \qquad \xrightarrow[z=0]{} \qquad \xi(r)\propto \left(\frac{r}{5\; Mpc/h}\right)^{-1.8}
 $$
-dove $r_0$ è detta \textbf{lunghezza di correlazione}. Quindi la probabilità di avere un eccesso di coppie su piccola scala è più grande che su grande scala (la tendenza delle galassie è quella di stare vicine vicine). Questa relazione non può continuare per $r\to \infty$, altrimenti il secondo termine dell'Eq. \ref{eq10:nummedioentrosfera} divergerebbe e non si ritroverebbe la densità media dell'universo. Affiché l'integrali si annulli, ci deve essere un punto in cui la funzione di correlazione diventi negativa. Però non può assumere qualsivoglia valore, la proprietà e definita positiva o al più nulla, quindi:
+dove $r_0$ è detta \textbf{lunghezza di correlazione}. Quindi la probabilità di avere un eccesso di coppie su piccola scala è più grande che su grande scala (la tendenza delle galassie è quella di stare vicine vicine). Questa relazione non può continuare per $r\to \infty$, altrimenti il secondo termine dell'Equazione (\ref{eq10:nummedioentrosfera}) divergerebbe e non si ritroverebbe la densità media dell'universo. Affiché l'integrali si annulli, ci deve essere un punto in cui la funzione di correlazione diventi negativa. Però non può assumere qualsivoglia valore, la proprietà e definita positiva o al più nulla, quindi:
 $$
 -1 < \xi(r) < +\infty
 $$
@@ -45,14 +44,15 @@ con la condizione ovvia $\vec{r}_{12}+ \vec{r}_{13}+\vec{r}_{23}=0$, le variabil
 \begin{equation}
     \xi_3 (r_{12}, r_{13}, r_{23}) = \xi_2(r_{12}) + \xi_2(r_{13}) + \xi_2(r_{23})+\xi_3^{connessa} (r_{12}, r_{13}, r_{23})
 \end{equation}
+
 L'eccesso di probabilità di trovare un tripletto è artificialmente aumentata dal fatto di avere già una coppia, pertanto questi contributi vanno aggiunti al puro eccesso di trovarne solo 3 (\textit{connessa}). Sappiate che avendo $n$ punti, l'unico modo univoco per definire le proprietà della loro distribuzione è conoscere tutti gli $n-1$-esimi momenti. In cosmologia la prima misura di non gaussianità è stata fatta misurando $\Delta^3$ con  $\xi_3$, al massimo ora si arriva a $\Delta^4$ con  $\xi_4$.
 
-\section{Funzione di Correlazione Angolare}
+\section{Funzione di correlazione angolare}
 Le stesse quantità appena definite possono essere proiettate angolarmente sul cielo. La misura del redshift è infatti un'approssimazione della distanza vera degli oggetti, che si muovono rispetto al flusso di Hubble con una velocità peculiare $v_{pec}$ difficilmente isolabile. Utilizzare il redshift come terza dimensione ``sporcherebbe'' l'informazione sulla distribuzione degli oggetti. La \textit{funzione di correlazione a due punti angolare} viene così definita:
 \begin{equation}
     \d{P}=n_\Omega^2 \d{\Omega_1}\d{\Omega_2}\left( 1+W(\theta)\right)
 \end{equation}
-dove $\d{\Omega_1}\d{\Omega_2}$ sono piccoli angoli solidi nel cielo che distano $\theta$. In questo modo non ci si sporca le mani con la distanza. Lo stesso approccio è stato utilizzato ai tempi di Peebles (anni '80) quando si avevano solo survey fotometriche e scarsa informazione spettroscopica sui redshift. Per $z=0$ la funzione di correlazione fittata sui dati $\xi(r)$ assume un'andamento del tipo:
+dove $\d{\Omega_1}\d{\Omega_2}$ sono piccoli angoli solidi nel cielo che distano $\theta$. In questo modo non ci si sporca le mani con la distanza. Lo stesso approccio è stato utilizzato ai tempi di Peebles (anni `80) quando si avevano solo survey fotometriche e scarsa informazione spettroscopica sui redshift. Per $z=0$ la funzione di correlazione fittata sui dati $\xi(r)$ assume un'andamento del tipo:
 $$
 W(\theta)\propto \left(\frac{\theta}{\theta_0}\right)^{-0.8}
 $$
@@ -87,6 +87,7 @@ detta \textit{equazione di Limber}. Così come la dispersione di velocità delle
     \item Assumendo un modello teorico che produce una distribuzione 3D $\xi$ e utilizzandola direttamente per ottenere il $W$ aspettato da confrontare con le osservazioni;
     \item (come si fa di solito) Deproiettando la $W$ osservata attraverso l'equazione invertita.
 \end{itemize}
+
 Per due cataloghi con profondità $D_*'\neq D_*$ (magnitudine limite diversa) la funzione di correlazione scala come:
 \begin{equation*}
     W'\left(\theta_{12}=\frac{D_*}{D_*'}\theta_{12}'\right)=\frac{D_*}{D_*'}\; W(\theta_{12})
@@ -98,18 +99,19 @@ Per conoscere la distribuzione di materia dell'universo, si può studiare come v
 \begin{equation}
     \langle N(<r)\rangle \propto \int \xi(r) r^2\; \d{r} \qquad \xrightarrow[z=0]{obs} \qquad \langle N(<r)\rangle \propto r^{1.2}
 \end{equation}
+
 Le osservazioni locali suggeriscono un andamento con il raggio elevato alla $\sim 1.2$. Per una distribuzione della materia sferica, planare e monodimensionale (filamento), l'esponente dovrebbe essere rispettivamente: $3$, $2$ e $1$. Questo suggerisce che gli oggetti sono distribuiti prevalentemente su filamenti e su piani. In generale:
 \begin{equation}
     \langle N(<r)\rangle \propto r^{3-\gamma}
 \end{equation}
-dove il valore $3-\gamma$ viene detto indice frattale. In base a quanto ricavato, l'universo si dovrebbe auto-riprodurre su tutte le scale. Questo non si verifica perché, come già discusso, la funzione di correlazione deve diventare negativa. [È auspicabile che l'universo non sia un frattale, altrimenti tutto quello che si è fatto fino ad ora andrebbe a farsi benedire: in una distribuzione frattale non si può definire una densità media].
+dove il valore ($3-\gamma$) viene detto indice frattale. In base a quanto ricavato, l'universo si dovrebbe auto-riprodurre su tutte le scale. Questo non si verifica perché, come già discusso, la funzione di correlazione deve diventare negativa. [È auspicabile che l'universo non sia un frattale, altrimenti tutto quello che si è fatto fino ad ora andrebbe a farsi benedire: in una distribuzione frattale non si può definire una densità media].
 
 \vspace{1em}
 Per calcolare praticamente la funzione di correlazione si utilizza la sua stessa definizione: eccesso/difetto di probabilità rispetto una distribuzione completamente casuale di avere una coppia di oggetti a distanza $r$:
 \begin{equation}
     1+\xi(r)=\frac{DD(r)}{RR(r)}            
 \end{equation}
-dove $DD(r)$ è la distanza tra due oggetti veri (\textit{dato-dato}) e $RR(r)$ è la distanza tra due oggetti appartenenti a un catalogo casuale (\textit{random-random}) avente le stesse caratteristiche di quello vero. Vanno considerati problemi di bordo, zone mascherate e differenti esposizioni. Il numero di coppie è normalizzato al numero di oggetti del catalogo, questo perché il random viene costruito con molti più oggetti. Computazionalmente, si ricorre a tecniche numeriche simili a quelle dei codici N-body (CITAAAAA), altrimenti per calcolare tutte le distanze tra $N$ oggetti sarebbero necessarie $N^2$ operazioni. Un altro stimatore utilizzato, meno sensibile ai problemi accennati, è:
+dove $DD(r)$ è la distanza tra due oggetti veri (\textit{dato-dato}) e $RR(r)$ è la distanza tra due oggetti appartenenti a un catalogo casuale (\textit{random-random}) avente le stesse caratteristiche di quello vero. Vanno considerati problemi di bordo, zone mascherate e differenti esposizioni. Il numero di coppie è normalizzato al numero di oggetti del catalogo, questo perché il random viene costruito con molti più oggetti. Computazionalmente, si ricorre a tecniche numeriche simili a quelle dei codici N-body, altrimenti per calcolare tutte le distanze tra $N$ oggetti sarebbero necessarie $N^2$ operazioni. Un altro stimatore utilizzato, meno sensibile ai problemi accennati, è:
 \begin{equation}
     1+\xi(r)= \frac{DD\; RR}{D^2R^2}
 \end{equation}
@@ -119,7 +121,7 @@ Come già discusso, teoricamente si preferisce utilizzare $\mathcal{P}(k)$, che 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.95 \textwidth]{Pictures/10/2pcf.eps}
-    \caption{Funzione di correlazione a due punti (2PCF) nello spazio dei redshift $s$ rispettivamente per i cataloghi: Main-GCS, LOWZ-CGS, CMASS-CGS a reshift medio crescente. L'area shaded è la distribuzione a posteriori derivante dall'analisi MCMC. (From Measuring the distance–redshift relation with the baryon acoustic oscillations of galaxy clusters 2016).}\label{fig10:2pcf}
+    \caption{Funzione di correlazione a due punti (2PCF) nello spazio dei redshift $s$ rispettivamente per i cataloghi: Main-GCS, LOWZ-CGS, CMASS-CGS a reshift medio crescente. L'area shaded è la distribuzione a posteriori derivante dall'analisi MCMC. (From: \cite{10.1093/mnras/stw306}).}\label{fig10:2pcf}
 \end{figure}
 
 \subsection{Bias osservativo}
@@ -142,9 +144,8 @@ questa quantità non è sempre stimabile. L'effetto ha come conseguenza che un o
 \begin{figure}[H]
     \subfloat[]{\includegraphics[width=.66\textwidth]{Pictures/10/fog.jpg}}$\;\;$
     \subfloat[]{\includegraphics[width=.295\textwidth]{Pictures/10/fogsim.jpg}}
-    \caption{(a) Effetto delle velocità peculiari nello spazio dei redshift. L'osservatore è posto in basso. Nell'immagine in alto a sinistra i punti rappresentano diverse galassie: quelli connessi sono galassie che distano in modo uguale dal centro di una sovradensità sferica (ammasso) nello spazio reale. A grande distanza le galassie cadono nel cluster: quelle più vicine a noi appaiono (spazio dei redshift) più distanti. Avvicinandoci alla regione interna virializzata, le velocità di dispersione aumentano e nello spazio dei redshift si forma il \textit{finger of God}.  , $v_{pec} <0$ (From: hneider Astronomy and Cosm CITAAAAS); (b) Fetta di universo simulato nello spazio reale e in quello dei redshift (From: Patron - \textit{The Bull's-Eye Effect: Are Galaxy Walls Observationally Enhanced? CITAAA.}} \label{fig10:bella} 
+    \caption{\textbf{(a)} Effetto delle velocità peculiari nello spazio dei redshift. L'osservatore è posto in basso. Nell'immagine in alto a sinistra i punti rappresentano diverse galassie: quelli connessi sono galassie che distano in modo uguale dal centro di una sovradensità sferica (ammasso) nello spazio reale. A grande distanza le galassie cadono nel cluster: quelle più vicine a noi appaiono (spazio dei redshift) più distanti. Avvicinandoci alla regione interna virializzata, le velocità di dispersione aumentano e nello spazio dei redshift si forma il \textit{finger of God}.  , $v_{pec} <0$ (From: \cite{Hamilton_1998}); \textbf{(b)} Fetta di universo simulato nello spazio reale e in quello dei redshift (From: \cite{Praton_1997})} \label{fig10:bella} 
 \end{figure}
-
 
 Per ovviare a questo problema si può ricorrere alla \textbf{funzione di correlazione proiettata} lungo la linea di vista (è simile a quella angolare). Si assume che il redshift sia una misura esatta della distanza, che viene scomposta in due contributi, perpendicolare e parallelo alla linea di vista: $s^2 =  r_\perp^2 + \pi^2$. È il termine $\pi$ lungo la linea di vista che crea problemi, pertanto si integra su questa dimensione:
 \begin{equation}
@@ -153,15 +154,15 @@ Per ovviare a questo problema si può ricorrere alla \textbf{funzione di correla
 dove $1+\xi(r_\perp , \pi)= DD/RR$. Proiettando si perde un po' di informazione, ma rimane soltanto quella pulita.
 
 \vspace{1em}
-Alternativamente, si può sfruttare la distorsione come informazione cosmologica. La velocità peculiare è dovuta al fatto che la materia non è distribuita in modo uniforme. Questo è un modo potente per testare la relatività generale nel tempo. Inizialmente si calcola la $W_{proj}$. Se la funzione di correlazione fosse isotropica, nel piano $(r_\perp,\pi)$ si avrebbero dei cerchi perfetti con raggio crescente al diminuire di $W$. Si assume che questa sia la funzione di correlazione nello spazio reale. La componente lungo la linea di vista si osserva invece distorta: schiacciata su grandi scale e \textit{finger of god} su piccole scale (Fig. ). Il primo è un effetto giustificabile e quantificabile dalla teoria lineare:
+Alternativamente, si può sfruttare la distorsione come informazione cosmologica. La velocità peculiare è dovuta al fatto che la materia non è distribuita in modo uniforme. Questo è un modo potente per testare la relatività generale nel tempo. Inizialmente si calcola la $W_{proj}$. Se la funzione di correlazione fosse isotropica, nel piano $(r_\perp,\pi)$ si avrebbero dei cerchi perfetti con raggio crescente al diminuire di $W$. Si assume che questa sia la funzione di correlazione nello spazio reale. La componente lungo la linea di vista si osserva invece distorta: schiacciata su grandi scale e \textit{finger of god} su piccole scale (Fig. \ref{fig:fine}). Il primo è un effetto giustificabile e quantificabile dalla teoria lineare:
 \begin{equation}
-    \xi(s)=\xi(r)\left(1+\frac{2}{3}f+\frac{1}{5}f\right);\qquad f=\frac{\d{\ln \delta_+}}{\d{\ln a}}\simeq \Omega_M^{0.55}+...
+    \xi(s)=\xi(r)\left(1+\frac{2}{3}f+\frac{1}{5}f\right);\qquad f=\frac{\d{\ln \delta_+}}{\d{\ln a}}\simeq \Omegam^{0.55}+...
 \end{equation}
 In questo modo è possibile misurare $\Omega_M$ o, meglio ancora, a diversi redshift, verificare la validità della relatività generale. Questo è uno dei test che farà Euclid. Prima questo era rumore, ora è oro. In realtà per le galassie, $f\to f/b$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.75 \textwidth]{Pictures/10/apforse.jpg}
-    \caption{Funzioni di correlazione proiettate per: galassie quiescienti (sinistra), galassie starforming (destra). Come mai differiscono? Io forse lo so, ma non ve lo dico! (From: The 2dF Galaxy Redshift Survey: galaxy clustering per spectral type CITAAA)}
+    \caption{Funzioni di correlazione proiettate per: galassie quiescienti (sinistra), galassie starforming (destra). Come mai differiscono? Io forse lo so, ma non ve lo dico! (From: \cite{Norberg_2002})}\label{fig:fine}
 \end{figure}
 
 \vspace{1em}
