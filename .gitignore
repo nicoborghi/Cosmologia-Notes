@@ -12,3 +12,6 @@
 __latexindent_temp.tex
 *.json
 main.synctex(busy)
+main-blx.bib
+main.run.xml
+main.bcf
