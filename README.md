@@ -28,4 +28,4 @@ sono riportati una serie di spunti di approfondimento dalla letteratura.*
 11. **Cosmic Microwave Background**: anisotropie primarie e secondarie, risultati osservativi
 12. **Dalla letteratura**: articoli e approfondimenti
 
-Try using inline HTML <a href="https://lightbulblab.github.io/Cosmologia-Notes/" download>Download</a> 
+<a href="https://lightbulblab.github.io/Cosmologia-Notes/" download>Download</a> 
